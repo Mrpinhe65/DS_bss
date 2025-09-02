@@ -71,12 +71,12 @@ void CopyBinTree_(BinTreeNode *&t1, BinTreeNode *t2);
 void BinTreeClear(BinTree *bt);
 void BinTreeClear_(BinTreeNode *t);
 ////////////////////////////////////////////////////////
-/// 4 非递归的方式访问二叉树
-void PreOrder_nr(BinTree *bt);
-void PreOrder_nr_f(BinTreeNode *t);
-void InOrder_nr(BinTree *bt);
-void InOrder_nr_f(BinTreeNode *t);
-// void PostOrder_nr(BinTree *bt);
-// void PostOrder_nr_f(BinTreeNode *t);
+/// 4 非递归的方式后序访问二叉树
+void PostOrder_nr(BinTree *bt);
+void PostOrder_nr_f(BinTreeNode *t);
+///////////////////////////////////////////////////////////
+/// 根据先序中序后序恢复二叉树
+void RestoneBinTree(BinTree *bt, char *VLR, char *LVR, int n);
+void RestoneBinTree_f(BinTreeNode *&t, char *VLR, char *LVR, int n);
 
 #endif //__BINTREE_H__

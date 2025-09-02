@@ -215,50 +215,43 @@ void BinTreeClear_(BinTreeNode *t) {
   }
 }
 //////////////////////////////////
-/// 4 非递归的方式访问二叉树
-/// 因为不是递归，所以需要栈记录根和子根，以便能返回来继续遍历。
-/// 如何记录按遍历要求确定入栈顺序
-void PreOrder_nr(BinTree *bt) { PreOrder_nr_f(bt->root); }
-
-void PreOrder_nr_f(BinTreeNode *t) {
-  if (t == NULL)
+/// 4 非递归的方式后序访问二叉树
+void PostOrder_nr(BinTree *bt) {
+  if (bt->root == NULL)
     return;
-  SeqStack st;
-  InitStack(&st);
-  push_st(&st, t);
-  BinTreeNode *p;
-  while (!empty_st(&st)) {
-    getTop(&st, &p);
-    pop_st(&st);
-    printf("%c ", p->data);
-    if (p->rightchild != NULL)
-      push_st(&st, p->rightchild);
-    if (p->leftchild != NULL)
-      push_st(&st, p->leftchild);
-  }
+  PostOrder_nr_f(bt->root);
 }
 
-void InOrder_nr(BinTree *bt) { InOrder_nr_f(bt->root); }
-
-void InOrder_nr_f(BinTreeNode *t) {
-  if (t == NULL)
-    return;
-  SeqStack st;
-  InitStack(&st);
-  push_st(&st, t);
-  BinTreeNode *p;
-  while (!empty_st(&st)) {
-    while (t != NULL && t->leftchild != NULL) {
-      push_st(&st, t->leftchild);
-      t = t->leftchild;
-    }
-    getTop(&st, &p);
-    pop_st(&st);
-    printf("%c ", p->data);
-    if (p->rightchild != NULL) {
-      t = p->rightchild;
-      if (t != NULL)
-        push_st(&st, t);
-    }
+void PostOrder_nr_f(BinTreeNode *t) {
+  if (t != NULL) {
+    SeqStack st;
+    InitStack(&st);
+    BinTreeNode *p;
+    StkNode sn;
+    do {
+      while (t != NULL) {
+        sn.ptr = t;
+        sn.tag = L;
+        push_st(&st, sn);
+        t = t->leftchild;
+      }
+      bool flag = true;
+      while (flag && !empty_st(&st)) {
+        getTop(&st, &sn);
+        pop_st(&st);
+        p = sn.ptr;
+        switch (sn.tag) {
+        case L:
+          sn.tag = R;
+          push_st(&st, sn);
+          flag = false;
+          t = p->rightchild;
+          break;
+        case R:
+          printf("%c ", p->data);
+          break;
+        }
+      }
+    } while (!empty_st(&st));
   }
 }

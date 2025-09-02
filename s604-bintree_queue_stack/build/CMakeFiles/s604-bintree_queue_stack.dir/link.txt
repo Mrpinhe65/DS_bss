@@ -1,0 +1,1 @@
+/usr/bin/c++ "CMakeFiles/s604-bintree_queue_stack.dir/src/bintree.cpp.o" "CMakeFiles/s604-bintree_queue_stack.dir/src/linkedqueue.cpp.o" "CMakeFiles/s604-bintree_queue_stack.dir/src/main.cpp.o" "CMakeFiles/s604-bintree_queue_stack.dir/src/seqstack.cpp.o" -o s604-bintree_queue_stack 

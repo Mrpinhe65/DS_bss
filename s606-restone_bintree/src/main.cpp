@@ -1,6 +1,7 @@
 #include "../include/bintree.hpp"
 #include "../include/linkedqueue.hpp"
 #include "../include/seqstack.hpp"
+#include <string.h>
 
 int main(int argc, char *argv[]) {
   // char *str="ABC##DE##F##G#H##";
@@ -11,7 +12,7 @@ int main(int argc, char *argv[]) {
   // CreateBinTree_1(&mytree); // ABC##DE##F##G#H##
   //  CreateBinTree_2(&mytree); // ABC##DE##F##G#H##
   //  CreateBinTree_3(&mytree);      // ABC##DE##F##G#H##
-  CreateBinTree_4(&mytree, str2); // ABC##DE##F##G#H##
+  CreateBinTree_4(&mytree, str1); // ABC##DE##F##G#H##
   PreOrder(&mytree);
   printf("\n");
 
@@ -45,13 +46,28 @@ int main(int argc, char *argv[]) {
   BinTreeClear(&youtree);
   // BinTreeClear(&mytree);
 
-  printf("非递归方式访问二叉树\n");
+  printf("非递归方式后序访问二叉树\n");
 
-  PreOrder_nr(&mytree);
+  PostOrder_nr(&mytree);
   printf("\n");
 
-  InOrder_nr(&mytree);
+  char VLR[] = "ABCDEFGH";
+  char LVR[] = "CBEDFAGH";
+  char LRV[] = "CEFDBHGA";
+  int n = strlen(VLR);
+
+  BinTree restonetree;
+  InitBinTree(&restonetree, '#');
+
+  RestoneBinTree(&restonetree, VLR, LVR, n);
+
+  printf("根据先序和中序恢复出来的二叉树\n");
+  PreOrder(&restonetree);
   printf("\n");
 
   return 0;
 }
+///////////////////////////////////////////////////////////
+/// 根据先序中序后序恢复二叉树
+// void RestoneBinTree(BinTree*bt,char*VLR,char*LVR,int n);
+// void RestoneBinTree_f(BinTreeNode*&t,char*VLR,char*LVR,int n);

@@ -1,0 +1,1 @@
+/usr/bin/c++ "CMakeFiles/s606-restonebintree.dir/src/bintree.cpp.o" "CMakeFiles/s606-restonebintree.dir/src/linkedqueue.cpp.o" "CMakeFiles/s606-restonebintree.dir/src/main.cpp.o" "CMakeFiles/s606-restonebintree.dir/src/seqstack.cpp.o" -o s606-restonebintree 

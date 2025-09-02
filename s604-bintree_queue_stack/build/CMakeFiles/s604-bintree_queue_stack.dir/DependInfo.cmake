@@ -1,0 +1,26 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  )
+
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/mrpinhe/Desktop/code/DS_c_bss/s604-bintree_queue_stack/src/bintree.cpp" "CMakeFiles/s604-bintree_queue_stack.dir/src/bintree.cpp.o" "gcc" "CMakeFiles/s604-bintree_queue_stack.dir/src/bintree.cpp.o.d"
+  "/home/mrpinhe/Desktop/code/DS_c_bss/s604-bintree_queue_stack/src/linkedqueue.cpp" "CMakeFiles/s604-bintree_queue_stack.dir/src/linkedqueue.cpp.o" "gcc" "CMakeFiles/s604-bintree_queue_stack.dir/src/linkedqueue.cpp.o.d"
+  "/home/mrpinhe/Desktop/code/DS_c_bss/s604-bintree_queue_stack/src/main.cpp" "CMakeFiles/s604-bintree_queue_stack.dir/src/main.cpp.o" "gcc" "CMakeFiles/s604-bintree_queue_stack.dir/src/main.cpp.o.d"
+  "/home/mrpinhe/Desktop/code/DS_c_bss/s604-bintree_queue_stack/src/seqstack.cpp" "CMakeFiles/s604-bintree_queue_stack.dir/src/seqstack.cpp.o" "gcc" "CMakeFiles/s604-bintree_queue_stack.dir/src/seqstack.cpp.o.d"
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

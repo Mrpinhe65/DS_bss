@@ -1,0 +1,15 @@
+{
+	"eventKindNames" : 
+	[
+		"message-v1",
+		"try_compile-v1",
+		"try_run-v1"
+	],
+	"kind" : "configureLog",
+	"path" : "/home/mrpinhe/Desktop/code/DS_c_bss/s604-bintree_queue_stack/build/CMakeFiles/CMakeConfigureLog.yaml",
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

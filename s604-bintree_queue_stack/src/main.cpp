@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
   // CreateBinTree_1(&mytree); // ABC##DE##F##G#H##
   //  CreateBinTree_2(&mytree); // ABC##DE##F##G#H##
   //  CreateBinTree_3(&mytree);      // ABC##DE##F##G#H##
-  CreateBinTree_4(&mytree, str2); // ABC##DE##F##G#H##
+  CreateBinTree_4(&mytree, str1); // ABC##DE##F##G#H##
   PreOrder(&mytree);
   printf("\n");
 
@@ -45,12 +45,9 @@ int main(int argc, char *argv[]) {
   BinTreeClear(&youtree);
   // BinTreeClear(&mytree);
 
-  printf("非递归方式访问二叉树\n");
+  printf("非递归方式后序访问二叉树\n");
 
-  PreOrder_nr(&mytree);
-  printf("\n");
-
-  InOrder_nr(&mytree);
+  PostOrder_nr(&mytree);
   printf("\n");
 
   return 0;
