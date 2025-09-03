@@ -56,13 +56,18 @@ int main(int argc, char *argv[]) {
   char LRV[] = "CEFDBHGA";
   int n = strlen(VLR);
 
-  BinTree restonetree;
-  InitBinTree(&restonetree, '#');
+  BinTree restoretree;
+  InitBinTree(&restoretree, '#');
 
-  RestoneBinTree(&restonetree, VLR, LVR, n);
-
+  RestoreBinTree(&restoretree, VLR, LVR, n);
   printf("根据先序和中序恢复出来的二叉树\n");
-  PreOrder(&restonetree);
+  PreOrder(&restoretree);
+  printf("\n");
+
+  InitBinTree(&restoretree, '#');
+  RestoreByInPost(&restoretree, LVR, LRV, n);
+  printf("根据中序和后序恢复出来的二叉树\n");
+  PreOrder(&restoretree);
   printf("\n");
 
   return 0;

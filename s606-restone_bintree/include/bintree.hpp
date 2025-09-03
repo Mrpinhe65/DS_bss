@@ -75,8 +75,11 @@ void BinTreeClear_(BinTreeNode *t);
 void PostOrder_nr(BinTree *bt);
 void PostOrder_nr_f(BinTreeNode *t);
 ///////////////////////////////////////////////////////////
-/// 根据先序中序后序恢复二叉树
-void RestoneBinTree(BinTree *bt, char *VLR, char *LVR, int n);
-void RestoneBinTree_f(BinTreeNode *&t, char *VLR, char *LVR, int n);
-
+/// 根据先序中序恢复二叉树
+void RestoreBinTree(BinTree *bt, char *VLR, char *LVR, int n);
+void RestoreBinTree_f(BinTreeNode *&t, char *VLR, char *LVR, int n);
+////////////////////////////////////////////////////////////
+/// 根据中序后序恢复二叉树
+void RestoreByInPost(BinTree *bt, char *LVR, char *LRV, int n);
+void RestoreByInPost_f(BinTreeNode *&t, char *LVR, char *LRV, int n);
 #endif //__BINTREE_H__

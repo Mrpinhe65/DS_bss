@@ -257,10 +257,10 @@ void PostOrder_nr_f(BinTreeNode *t) {
 }
 ///////////////////////////////////////////////////////////
 /// 根据先序中序后序恢复二叉树
-void RestoneBinTree(BinTree *bt, char *VLR, char *LVR, int n) {
-  RestoneBinTree_f(bt->root, VLR, LVR, n);
+void RestoreBinTree(BinTree *bt, char *VLR, char *LVR, int n) {
+  RestoreBinTree_f(bt->root, VLR, LVR, n);
 }
-void RestoneBinTree_f(BinTreeNode *&t, char *VLR, char *LVR, int n) {
+void RestoreBinTree_f(BinTreeNode *&t, char *VLR, char *LVR, int n) {
   if (n == 0) {
     t = NULL;
   } else {
@@ -272,7 +272,28 @@ void RestoneBinTree_f(BinTreeNode *&t, char *VLR, char *LVR, int n) {
     t = (BinTreeNode *)malloc(sizeof(BinTreeNode));
     assert(t != NULL);
     t->data = LVR[k];
-    RestoneBinTree_f(t->leftchild, VLR + 1, LVR, k);
-    RestoneBinTree_f(t->rightchild, VLR + k + 1, LVR + k + 1, n - k - 1);
+    RestoreBinTree_f(t->leftchild, VLR + 1, LVR, k);
+    RestoreBinTree_f(t->rightchild, VLR + k + 1, LVR + k + 1, n - k - 1);
+  }
+}
+////////////////////////////////////////////////////////////
+/// 根据中序后序恢复二叉树
+void RestoreByInPost(BinTree *bt, char *LVR, char *LRV, int n) {
+  RestoreByInPost_f(bt->root, LVR, LRV, n);
+}
+void RestoreByInPost_f(BinTreeNode *&t, char *LVR, char *LRV, int n) {
+  if (n == 0) {
+    t = NULL;
+  } else {
+    int k = 0;
+    while (LRV[n - 1] != LVR[k])
+      k++;
+    if (k > n)
+      return;
+    t = (BinTreeNode *)malloc(sizeof(BinTreeNode));
+    assert(t != NULL);
+    t->data = LVR[k];
+    RestoreByInPost_f(t->rightchild, LVR + k + 1, LRV + k, n - k - 1);
+    RestoreByInPost_f(t->leftchild, LVR, LRV, k);
   }
 }
