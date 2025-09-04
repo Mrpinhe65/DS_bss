@@ -1,0 +1,1 @@
+:lua if package.loaded["heirline"] then print("Heirline is loaded!") else print("Heirline NOT loaded!") end

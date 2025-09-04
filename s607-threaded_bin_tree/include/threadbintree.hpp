@@ -25,9 +25,25 @@ BinTreeNode *_BuildNodeBymalloc(ElemType data);
 void InitBinTree(BinTree *bt, ElemType ref);
 void CreateBinTree(BinTree *bt, char *str);
 void CreateBinTree_i(BinTree *&bt, BinTreeNode *&t, char *&str);
+////////////////////////////////////////////////////////////////
+/// 1
 void CreateInThread(BinTree *bt);
 void CreateInThread_i(BinTreeNode *&t, BinTreeNode *&pre);
+///////////////////////////////////////////////////////////////
+/// 2
+BinTreeNode *First(BinTree *bt);
+BinTreeNode *First_i(BinTreeNode *t);
+BinTreeNode *Last(BinTree *bt);
+BinTreeNode *Last_i(BinTreeNode *t);
+BinTreeNode *Next(BinTree *bt, BinTreeNode *cur);
+BinTreeNode *Next_i(BinTreeNode *t, BinTreeNode *cur);
+BinTreeNode *Prio(BinTree *bt, BinTreeNode *cur);
+BinTreeNode *Prio_i(BinTreeNode *t, BinTreeNode *cur);
+void InOrderThread(BinTree *bt);
+void InOrderThread_i(BinTreeNode *t);
 
+////////////////////////////////////////////////////////////////
+/// s602
 void PreOrder(BinTree *bt);
 void PreOrder(BinTreeNode *t);
 void InOrder(BinTree *bt);

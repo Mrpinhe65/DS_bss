@@ -21,5 +21,13 @@ int main(int argc, char *argv[]) {
 
   CreateInThread(&mytree);
 
+  BinTreeNode *p;
+  p = First(&mytree);
+  printf("First p = %p, p->data = %c\n", p, p->data);
+  p = Last(&mytree);
+  printf("Last = p = %p, p->data = %c\n", p, p->data);
+
+  InOrderThread(&mytree);
+
   return 0;
 }

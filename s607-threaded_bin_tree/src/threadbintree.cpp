@@ -40,6 +40,60 @@ void CreateInThread_i(BinTreeNode *&t, BinTreeNode *&pre) {
   pre = t;
   CreateInThread_i(t->rightchild, pre);
 }
+//////////////////////////////////////////////////////////
+/// 2
+BinTreeNode *First(BinTree *bt) { return First_i(bt->root); }
+BinTreeNode *First_i(BinTreeNode *t) {
+  if (t == NULL)
+    return NULL;
+  BinTreeNode *p = t;
+  while (p->ltag == LINK)
+    p = p->leftchild;
+  return p;
+}
+
+BinTreeNode *Last(BinTree *bt) { return Last_i(bt->root); }
+BinTreeNode *Last_i(BinTreeNode *t) {
+  if (t == NULL)
+    return NULL;
+  BinTreeNode *p = t;
+  while (p->rtag == LINK)
+    p = p->rightchild;
+  return p;
+}
+
+BinTreeNode *Next(BinTree *bt, BinTreeNode *cur) {
+  return Next_i(bt->root, cur);
+}
+BinTreeNode *Next_i(BinTreeNode *t, BinTreeNode *cur) {
+  if (t == NULL || cur == NULL)
+    return NULL;
+  if (cur->rtag == THREAD)
+    return cur->rightchild;
+  return First_i(cur->rightchild);
+}
+BinTreeNode *Prio(BinTree *bt, BinTreeNode *cur) {
+  return Prio_i(bt->root, cur);
+}
+BinTreeNode *Prio_i(BinTreeNode *t, BinTreeNode *cur) {
+  if (t == NULL && cur == NULL)
+    return NULL;
+  if (cur->rtag == THREAD)
+    return cur->leftchild;
+  return Last_i(cur->leftchild);
+}
+// 线索化之后，因左右子树指针又兼做前驱后继指针，所以s602的遍历函数不适用
+// 需要重新编写
+void InOrderThread(BinTree *bt) { InOrderThread_i(bt->root); }
+void InOrderThread_i(BinTreeNode *t) {
+  if (t == NULL)
+    return;
+  BinTreeNode *p;
+  for (p = First_i(t); p != NULL; p = Next_i(t, p)) {
+    printf("%c ", p->data);
+  }
+  printf("\n");
+}
 
 /////////////////////////////////////////////////////
 /// 辅助函数
@@ -53,6 +107,7 @@ BinTreeNode *_BuildNodeBymalloc(ElemType data) {
   s->rtag = LINK;
   return s;
 }
+
 //////////////////////////////////////////////////////////////////////
 /// s602函数
 void PreOrder(BinTree *bt) { PreOrder(bt->root); }
