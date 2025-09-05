@@ -29,5 +29,10 @@ int main(int argc, char *argv[]) {
 
   InOrderThread(&mytree);
 
+  BinTreeNode *s = Search(&mytree, 'B');
+  printf("s[&%c] = %p\n", s->data, s);
+
+  BinTreeNode *parent = Parent(&mytree, s);
+  printf("Parent = %c\n", parent->data);
   return 0;
 }

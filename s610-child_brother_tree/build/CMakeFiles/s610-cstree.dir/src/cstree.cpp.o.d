@@ -1,7 +1,7 @@
-CMakeFiles/s607-threadbintree.dir/src/threadbintree.cpp.o: \
- /home/mrpinhe/Desktop/code/DS_c_bss/s607-threaded_bin_tree/src/threadbintree.cpp \
+CMakeFiles/s610-cstree.dir/src/cstree.cpp.o: \
+ /home/mrpinhe/Desktop/code/DS_c_bss/s610-child_brother_tree/src/cstree.cpp \
  /usr/include/stdc-predef.h \
- /home/mrpinhe/Desktop/code/DS_c_bss/s607-threaded_bin_tree/src/../include/threadbintree.hpp \
+ /home/mrpinhe/Desktop/code/DS_c_bss/s610-child_brother_tree/include/cstree.hpp \
  /usr/include/assert.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -25,9 +25,4 @@ CMakeFiles/s607-threadbintree.dir/src/threadbintree.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
- /usr/include/c++/13/cstddef \
- /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
- /usr/include/c++/13/pstl/pstl_config.h
+ /usr/include/x86_64-linux-gnu/bits/floatn-common.h

@@ -41,6 +41,10 @@ BinTreeNode *Prio(BinTree *bt, BinTreeNode *cur);
 BinTreeNode *Prio_i(BinTreeNode *t, BinTreeNode *cur);
 void InOrderThread(BinTree *bt);
 void InOrderThread_i(BinTreeNode *t);
+BinTreeNode *Search(BinTree *bt, ElemType key);
+BinTreeNode *Search_i(BinTreeNode *t, ElemType key);
+BinTreeNode *Parent(BinTree *bt, BinTreeNode *cur);
+BinTreeNode *Parent_i(BinTreeNode *t, BinTreeNode *cur);
 
 ////////////////////////////////////////////////////////////////
 /// s602

@@ -1,0 +1,1 @@
+/usr/bin/c++ "CMakeFiles/s610-cstree.dir/src/cstree.cpp.o" "CMakeFiles/s610-cstree.dir/src/main.cpp.o" -o s610-cstree 

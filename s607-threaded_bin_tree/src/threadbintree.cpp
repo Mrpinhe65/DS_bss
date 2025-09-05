@@ -1,4 +1,5 @@
 #include "../include/threadbintree.hpp"
+#include <cstddef>
 
 void InitBinTree(BinTree *bt, ElemType ref) {
   bt->root = NULL;
@@ -93,6 +94,50 @@ void InOrderThread_i(BinTreeNode *t) {
     printf("%c ", p->data);
   }
   printf("\n");
+}
+BinTreeNode *Search(BinTree *bt, ElemType key) {
+  return Search_i(bt->root, key);
+}
+BinTreeNode *Search_i(BinTreeNode *t, ElemType key) {
+  if (t == NULL)
+    return NULL;
+  if (t->data == key)
+    return t;
+  BinTreeNode *p;
+  for (p = First_i(t); p != NULL; p = Next_i(t, p)) {
+    if (p->data == key)
+      return p;
+  }
+  return NULL;
+}
+BinTreeNode *Parent(BinTree *bt, BinTreeNode *cur) {
+  return Parent_i(bt->root, cur);
+}
+
+BinTreeNode *Parent_i(BinTreeNode *t, BinTreeNode *cur) {
+  if (t == NULL || cur == NULL)
+    return NULL;
+  if (t == cur)
+    return NULL;
+  BinTreeNode *p;
+  if (cur->ltag == THREAD) {
+    p = cur->leftchild;
+    if (p->rightchild == cur)
+      return p;
+  }
+  if (cur->rtag == THREAD) {
+    p = cur->rightchild;
+    if (p->leftchild == cur)
+      return p;
+  }
+
+  p = First_i(cur->leftchild);
+  p = p->leftchild;
+  if (p != NULL && p->rightchild == cur) {
+    return p;
+  }
+  p = Last_i(cur->rightchild);
+  return p->rightchild;
 }
 
 /////////////////////////////////////////////////////

@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/mrpinhe/Desktop/code/DS_c_bss/s610-child_brother_tree/build",
+  "command": "/usr/bin/c++  -I/home/mrpinhe/Desktop/code/DS_c_bss/s610-child_brother_tree/include  -o CMakeFiles/s610-cstree.dir/src/cstree.cpp.o -c /home/mrpinhe/Desktop/code/DS_c_bss/s610-child_brother_tree/src/cstree.cpp",
+  "file": "/home/mrpinhe/Desktop/code/DS_c_bss/s610-child_brother_tree/src/cstree.cpp",
+  "output": "CMakeFiles/s610-cstree.dir/src/cstree.cpp.o"
+},
+{
+  "directory": "/home/mrpinhe/Desktop/code/DS_c_bss/s610-child_brother_tree/build",
+  "command": "/usr/bin/c++  -I/home/mrpinhe/Desktop/code/DS_c_bss/s610-child_brother_tree/include  -o CMakeFiles/s610-cstree.dir/src/main.cpp.o -c /home/mrpinhe/Desktop/code/DS_c_bss/s610-child_brother_tree/src/main.cpp",
+  "file": "/home/mrpinhe/Desktop/code/DS_c_bss/s610-child_brother_tree/src/main.cpp",
+  "output": "CMakeFiles/s610-cstree.dir/src/main.cpp.o"
+}
+]
