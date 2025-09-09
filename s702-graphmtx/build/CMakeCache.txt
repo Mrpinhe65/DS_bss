@@ -148,7 +148,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=s702-graph
+CMAKE_PROJECT_NAME:STATIC=s702-graphmtx
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -223,6 +223,15 @@ s702-graph_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 s702-graph_SOURCE_DIR:STATIC=/home/mrpinhe/Desktop/code/DS_c_bss/s702-graph
+
+//Value Computed by CMake
+s702-graphmtx_BINARY_DIR:STATIC=/home/mrpinhe/Desktop/code/DS_c_bss/s702-graph/build
+
+//Value Computed by CMake
+s702-graphmtx_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+s702-graphmtx_SOURCE_DIR:STATIC=/home/mrpinhe/Desktop/code/DS_c_bss/s702-graph
 
 
 ########################

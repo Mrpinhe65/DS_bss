@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/mrpinhe/Desktop/code/DS_c_bss/s702-graph/build",
+  "command": "/usr/bin/c++  -I/home/mrpinhe/Desktop/code/DS_c_bss/s702-graph/include  -o CMakeFiles/s702-graphmtx.dir/src/graphmtx.cpp.o -c /home/mrpinhe/Desktop/code/DS_c_bss/s702-graph/src/graphmtx.cpp",
+  "file": "/home/mrpinhe/Desktop/code/DS_c_bss/s702-graph/src/graphmtx.cpp",
+  "output": "CMakeFiles/s702-graphmtx.dir/src/graphmtx.cpp.o"
+},
+{
+  "directory": "/home/mrpinhe/Desktop/code/DS_c_bss/s702-graph/build",
+  "command": "/usr/bin/c++  -I/home/mrpinhe/Desktop/code/DS_c_bss/s702-graph/include  -o CMakeFiles/s702-graphmtx.dir/src/main.cpp.o -c /home/mrpinhe/Desktop/code/DS_c_bss/s702-graph/src/main.cpp",
+  "file": "/home/mrpinhe/Desktop/code/DS_c_bss/s702-graph/src/main.cpp",
+  "output": "CMakeFiles/s702-graphmtx.dir/src/main.cpp.o"
+}
+]

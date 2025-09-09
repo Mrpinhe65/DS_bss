@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(s702-graph)
+project(s704-graphlink)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # 设置 C 标准（如果是 C 项目）

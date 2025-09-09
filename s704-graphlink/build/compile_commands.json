@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/mrpinhe/Desktop/code/DS_c_bss/s704-graphlink/build",
+  "command": "/usr/bin/c++  -I/home/mrpinhe/Desktop/code/DS_c_bss/s704-graphlink/include  -o CMakeFiles/s704-graphlink.dir/src/graphlink.cpp.o -c /home/mrpinhe/Desktop/code/DS_c_bss/s704-graphlink/src/graphlink.cpp",
+  "file": "/home/mrpinhe/Desktop/code/DS_c_bss/s704-graphlink/src/graphlink.cpp",
+  "output": "CMakeFiles/s704-graphlink.dir/src/graphlink.cpp.o"
+},
+{
+  "directory": "/home/mrpinhe/Desktop/code/DS_c_bss/s704-graphlink/build",
+  "command": "/usr/bin/c++  -I/home/mrpinhe/Desktop/code/DS_c_bss/s704-graphlink/include  -o CMakeFiles/s704-graphlink.dir/src/main.cpp.o -c /home/mrpinhe/Desktop/code/DS_c_bss/s704-graphlink/src/main.cpp",
+  "file": "/home/mrpinhe/Desktop/code/DS_c_bss/s704-graphlink/src/main.cpp",
+  "output": "CMakeFiles/s704-graphlink.dir/src/main.cpp.o"
+}
+]
